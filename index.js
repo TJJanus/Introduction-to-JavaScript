@@ -25,11 +25,8 @@ if (legality === 'not legal'){
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 let x = '1999';
-x.toString();
-('1999').toString();
-(1999).toString();
 
-console.log(x);
+console.log(parseInt(x,10));
 
 
 
@@ -164,12 +161,18 @@ console.log(dogYears(30.48,1));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
-function annoyingSong (){
-    for (i = 6; i > 1; i--)
-    console.log('bottles of soda on the wall');
+
+
+function annoyingSong (start){
+    while (start !== 0 ){
+        console.log(start +' bottles of soda on the wall');
+        console.log(start +' bottles of soda');
+        start -= 1;
+        console.log('take one down pass it around ' + start + ' bottles of soda on the wall');
+    }
 }
 
-annoyingSong()
+annoyingSong(99)
 
 /* function (annoyingSong)
 for loop iterating down instad of up
